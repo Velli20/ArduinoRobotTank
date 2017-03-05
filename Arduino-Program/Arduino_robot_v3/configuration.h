@@ -37,6 +37,6 @@ Adafruit_SSD1306 display(OLED_RESET);
 /* Serial port at which bluetooth module is connected.
    Arduino UNO has only one serial port, so change the value to
    Serial and make sure to disconnect the module when uploading the code
-   to the Arduino board*/
+   to the Arduino board */
 #define BLUETOOTH_MODULE_SERIAL_PORT    Serial2
 #define BLUETOOTH_MODULE_BAUD_RATE      57600

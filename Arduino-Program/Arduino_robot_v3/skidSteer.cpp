@@ -31,17 +31,17 @@ void SkidSteer::move(int y, int x) {
   float leftMotorScale, rightMotorScale, maxMotorScale;
 
 
-  //calculate the scale of the results in comparision base 8 bit PWM resolution
+  // Calculate the scale of the results in comparision base 8 bit PWM resolution
   leftMotorScale =  motorSpeedLeft / 255.0;
   leftMotorScale = abs(leftMotorScale);
   rightMotorScale =  motorSpeedRight / 255.0;
   rightMotorScale = abs(rightMotorScale);
 
-  //choose the max scale value if it is above 1
+  // Choose the max scale value if it is above 1
   maxMotorScale = max(leftMotorScale, rightMotorScale);
   maxMotorScale = max(1, maxMotorScale);
 
-  //and apply it to the mixed values
+  // And apply it to the mixed values
   leftMotorScaled = constrain(motorSpeedLeft / maxMotorScale, -255, 255);
   rightMotorScaled = constrain(motorSpeedRight / maxMotorScale, -255, 255);
 
