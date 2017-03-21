@@ -1,6 +1,6 @@
 /* Uncomment the following defination if SSD1306 0.96" I2C 128X64 OLED LCD is connected */
 /* #define HAS_OLED_LCD */
-
+#define HAS_OLED_LCD
 #ifdef  HAS_OLED_LCD
 /* Import libraries that are required to communicate with
    the SSD1306 0.96" I2C 128X64 OLED LCD.

@@ -21,6 +21,8 @@ class SkidSteer {
   private:
     /* Variables */
     bool skidSteerIsReady = false;
+    bool skidSteerInitializationFailed = false;
+    long delayUntil = 0;
     
     /* Private function prototypes */
     void initialize();
@@ -30,6 +32,10 @@ class SkidSteer {
     /* Public function prototypes */
     void move(int y, int x);
     void stop();
+    void delay(long timeInMillis);
+
+    boolean isDelaying();
+    long getRemainingDelayTime();
 };
 
 
