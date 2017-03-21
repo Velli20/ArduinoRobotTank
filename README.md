@@ -3,7 +3,7 @@
 
 ![CAD Assembly](https://cloud.githubusercontent.com/assets/25138671/24061863/de0f838e-0b61-11e7-8827-5f46b928c86c.png)
 
-Fully 3D-printable robot for Arduino Mega/Uno/Due Controller Board. There is enough room to stack up to 2x shields on top of the controller board and also mounting holes for the ESP8266 WiFI Development Board.
+Fully 3D-printable robot for Arduino Mega/Uno/Due Controller Board. Designed to fit up to 2 pcs of Arduino shields on top of the controller board.
 
 Parts to print
 --------------
@@ -65,7 +65,7 @@ Code example
 
 Usage of the skid steering algorithm:
 
-```
+```C++
 #define MOTOR_SPEED_MAX 255     // Define max speed
 #define MOTOR_SPEED_MIN -255    // Define min speed
 
