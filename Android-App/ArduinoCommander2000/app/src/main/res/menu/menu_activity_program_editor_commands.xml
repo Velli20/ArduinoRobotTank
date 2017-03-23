@@ -1,0 +1,63 @@
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) [2017] [velli20]
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_command_rotate"
+        android:orderInCategory="0"
+        android:title="@string/menu_command_rotate"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_rotate_right_grey"/>
+
+    <item
+        android:id="@+id/menu_command_move"
+        android:orderInCategory="1"
+        android:title="@string/menu_command_move"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_arrow_up_grey"/>
+
+
+    <item
+        android:id="@+id/menu_command_set_speed"
+        android:orderInCategory="2"
+        android:title="@string/menu_command_set_speed"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_speedometer_grey"/>
+
+    <item
+        android:id="@+id/menu_command_delay"
+        android:orderInCategory="3"
+        android:title="@string/menu_command_delay"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_timer_sand_grey"/>
+
+    <item
+        android:id="@+id/menu_command_other"
+        android:orderInCategory="4"
+        android:title="@string/menu_command_other"
+        app:showAsAction="never"/>
+
+</menu>

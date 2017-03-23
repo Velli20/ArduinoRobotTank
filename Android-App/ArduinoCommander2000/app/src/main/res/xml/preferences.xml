@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) [2017] [velli20]
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="@string/preference_category_command_prefixes">
+            <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_accelerometer_x_axis"
+            android:key="@string/key_command_prefix_accelerometer_x_axis"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_accelerometer_x_axis"
+            android:allowUndo="true"
+            android:editable="false" />
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_accelerometer_y_axis"
+            android:key="@string/key_command_prefix_accelerometer_y_axis"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_accelerometer_y_axis" />
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_joystick_x_axis"
+            android:key="@string/key_command_prefix_joystick_x_axis"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_joystick_x_axis" />
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_joystick_y_axis"
+            android:key="@string/key_command_prefix_joystick_y_axis"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_joystick_y_axis" />
+
+
+
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_delay"
+            android:key="@string/key_command_prefix_delay"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_delay" />
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_move_backward"
+            android:key="@string/key_command_prefix_move_backward"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_move_backward" />
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_move_forward"
+            android:key="@string/key_command_prefix_move_forward"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_move_forward" />
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_rotate_counterclockwise"
+            android:key="@string/key_command_prefix_rotate_counterclockwise"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_rotate_counterclockwise" />
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_rotate_clockwise"
+            android:key="@string/key_command_prefix_rotate_clockwise"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_rotate_clockwise"/>
+        <EditTextPreference
+            android:defaultValue="@string/default_value_prefix_set_speed"
+            android:key="@string/key_command_prefix_set_speed"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/preference_command_prefix_set_speed" />
+    </PreferenceCategory>
+</PreferenceScreen>

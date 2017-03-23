@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) [2017] [velli20]
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp">
+
+    <View
+        android:id="@+id/list_item_program_step_connector_line_top"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:background="#000000"
+        android:alpha="0.12"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_above="@+id/list_item_program_step_icon"/>
+
+    <com.velli.commander.roboto.RobotoTextView
+        android:id="@+id/list_item_program_step_icon"
+        style="@style/StepperCircleActive"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:text="1"
+        android:layout_centerVertical="true"/>
+
+    <com.velli.commander.roboto.RobotoTextView
+        android:id="@+id/list_item_program_step_text"
+        style="@style/StepperTextActive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_toRightOf="@+id/list_item_program_step_icon"
+        android:layout_toEndOf="@+id/list_item_program_step_icon"
+        android:layout_toLeftOf="@+id/list_item_program_step_button_reorder"
+        android:layout_toStartOf="@+id/list_item_program_step_button_reorder"
+        android:layout_centerVertical="true"/>
+
+    <View
+        android:id="@+id/list_item_program_step_connector_line_bottom"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        android:alpha="0.12"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_below="@+id/list_item_program_step_icon"/>
+
+    <ImageButton
+        android:id="@+id/list_item_program_step_button_reorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_reorder_horizontal_grey"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+</RelativeLayout>

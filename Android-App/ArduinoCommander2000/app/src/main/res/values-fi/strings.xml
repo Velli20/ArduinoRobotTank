@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) [2017] [velli20]
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+
+    <string name="app_name">Arduino Tank</string>
+
+    <string name="menu_bluetooth_connect">Yhdistä</string>
+    <string name="menu_bluetooth_disconnect">Katkaise yhteys</string>
+    <string name="menu_settings">Asetukset</string>
+    <string name="menu_accelerometer">Kiihtyvyysanturi</string>
+    <string name="menu_controller_pad">Käsiohjaus</string>
+    <string name="menu_console">Konsoli</string>
+    <string name="menu_programs">Ohjelmat</string>
+    <string name="menu_save">Tallenna</string>
+    <string name="menu_delete">Poista</string>
+    <string name="menu_command_rotate">Käänny</string>
+    <string name="menu_command_move">Liiku</string>
+    <string name="menu_command_set_speed">Aseta nopeus</string>
+    <string name="menu_command_delay">Odota</string>
+    <string name="menu_command_other">Muu komento</string>
+    <string name="menu_rename_program">Nimeä uudelleen</string>
+    <string name="menu_delete_program">Poista</string>
+    <string name="menu_execute_program">Suorita ohjelma</string>
+
+    <string name="action_command_rotate" formatted="false">Käänny %d astetta %s</string>
+    <string name="action_command_move" formatted="false">Liiku %d cm %s</string>
+    <string name="action_command_set_speed" formatted="false">Aseta nopeus %d</string>
+    <string name="action_command_delay" formatted="false">Odota %d %s</string>
+    <string name="action_command_other">Muu komento</string>
+    <string name="action_clockwise">Myötäpäivään</string>
+    <string name="action_counterclockwise">Vastapäivään</string>
+
+    <string name="action_search_devices">Etsi laitteita</string>
+    <string name="action_searching_devices">Etsitään laitteita</string>
+    <string name="action_connecting_to_device">Yhdistetään laitteeseen</string>
+    <string name="action_connecting_to_device_failed">Yhdistäminen laitteeseen epäonnistui</string>
+    <string name="action_connected_to_device">Yhdistetty laitteeseen</string>
+    <string name="action_retry">Yritä uudelleen</string>
+    <string name="action_cancel">Peruuta</string>
+    <string name="action_delete">Poista</string>
+    <string name="action_speed" formatted="false">Nopeus %d</string>
+
+    <string name="title_new_devices">Löydetyt laitteet</string>
+    <string name="title_bonded_devices">Pariksi liitetyt laitteet</string>
+    <string name="title_no_devices">Ei laitteita</string>
+    <string name="title_device_no_name">(Nimetön)</string>
+    <string name="title_x_axis">X akseli:</string>
+    <string name="title_y_axis">Y akseli:</string>
+    <string name="title_new_program">Uusi ohjelma</string>
+    <string name="title_edit_program">Muokkaa ohjelmaa</string>
+    <string name="title_settings">Asetukset</string>
+    <string name="title_no_programs">Ei ohjelmia</string>
+    <string name="title_no_program_steps">Ei ohjelma vaiheita.\nKlikkaa alhaalta lisätäksesi uuden vaiheen.</string>
+    <string name="error_not_connected">Virhe: Ei yhdistettynä</string>
+
+    <string name="navigation_drawer_open">Avaa sivupalkki</string>
+    <string name="navigation_drawer_close">Sulje sivupalkki</string>
+
+    <string name="edit_text_hint_console">Komento</string>
+    <string name="edit_text_hint_distance">Etäisyys (cm)</string>
+    <string name="edit_text_hint_angle">Kulma (asteina)</string>
+    <string name="edit_text_hint_delay">Aika</string>
+    <string name="edit_text_hint_program_name">Ohjelman nimi</string>
+
+    <string name="action_send_command">Lähetä</string>
+    <string name="action_hand_controls_forward">Eteen</string>
+    <string name="action_hand_controls_backward">Taakse</string>
+    <string name="action_hand_controls_to_right">Oikealle</string>
+    <string name="action_hand_controls_to_left">Vasemmalle</string>
+    <string name="action_forward">Eteenpäin</string>
+    <string name="action_backward">Taaksepäin</string>
+    <string name="action_speed_manual_control" formatted="false">Nopeus x: %d y: %d</string>
+
+    <string name="toast_message_program_saved">Ohjelma tallennettu.</string>
+    <string name="toast_message_program_renamed">Ohjelma nimetty uudelleen.</string>
+
+    <string name="preference_category_command_prefixes">Komentojen etuliitteet</string>
+
+    <string name="preference_command_prefix_accelerometer_x_axis">Kiihtyvyysanturin x-akseli</string>
+    <string name="preference_command_prefix_accelerometer_y_axis">Kiihtyvyysanturin y-akseli</string>
+    <string name="preference_command_prefix_joystick_x_axis">Tatti x-akseli</string>
+    <string name="preference_command_prefix_joystick_y_axis">Tatti y-akseli</string>
+    <string name="preference_command_prefix_move_forward">Liiku eteenpäin</string>
+    <string name="preference_command_prefix_move_backward">Liiku taaksepäin</string>
+    <string name="preference_command_prefix_delay">Odota</string>
+    <string name="preference_command_prefix_rotate_clockwise">Käänny myötäpäivään</string>
+    <string name="preference_command_prefix_rotate_counterclockwise">Käänny vastapäivään</string>
+    <string name="preference_command_prefix_set_speed">Aseta nopeus</string>
+
+
+    <array name="command_move_directions">
+        <item> @string/action_forward </item>
+        <item> @string/action_backward </item>
+    </array>
+
+    <array name="command_rotate_directions">
+        <item>@string/action_clockwise</item>
+        <item>@string/action_counterclockwise</item>
+    </array>
+
+    <array name="command_delay_units">
+        <item> ms </item>
+        <item> s </item>
+        <item> min </item>
+    </array>
+</resources>
