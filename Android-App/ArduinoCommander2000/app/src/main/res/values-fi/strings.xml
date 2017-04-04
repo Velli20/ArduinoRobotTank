@@ -44,6 +44,7 @@
     <string name="menu_rename_program">Nimeä uudelleen</string>
     <string name="menu_delete_program">Poista</string>
     <string name="menu_execute_program">Suorita ohjelma</string>
+    <string name="menu_clear_console">Tyhjennä konsoli</string>
 
     <string name="action_command_rotate" formatted="false">Käänny %d astetta %s</string>
     <string name="action_command_move" formatted="false">Liiku %d cm %s</string>

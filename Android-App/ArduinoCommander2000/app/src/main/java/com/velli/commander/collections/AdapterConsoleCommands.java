@@ -75,7 +75,12 @@ public class AdapterConsoleCommands extends RecyclerView.Adapter<RecyclerView.Vi
             mCommands = new ArrayList<>();
         }
         mCommands.add(command);
-        notifyItemInserted(mCommands.size()-1);
+        notifyDataSetChanged();
+    }
+
+    public void clearCommandList() {
+        mCommands.clear();
+       notifyDataSetChanged();
     }
 
 

@@ -32,6 +32,9 @@ import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -63,6 +66,7 @@ public class FragmentConsole extends Fragment implements BluetoothCommandCallbac
         mButtonSendCommand.setOnClickListener(this);
         mEditTextCommand = (AppCompatEditText) view.findViewById(R.id.fragment_console_edit_text_command);
 
+        setHasOptionsMenu(true);
 
         return view;
     }
@@ -72,6 +76,8 @@ public class FragmentConsole extends Fragment implements BluetoothCommandCallbac
         super.onResume();
         ((MainActivity)getActivity()).registerBluetoothCommandCallback(this);
         mAdapter.addCommandsList(BluetoothService.getInstance().getCommandsList());
+        mConsoleMessages.scrollToPosition(mAdapter.getItemCount() -1);
+        getActivity().invalidateOptionsMenu();
     }
 
     @Override
@@ -84,13 +90,49 @@ public class FragmentConsole extends Fragment implements BluetoothCommandCallbac
     }
 
     @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+        if(mAdapter != null && mAdapter.getItemCount() > 0) {
+            menu.findItem(R.id.menu_clear_console).setVisible(true);
+        } else {
+            menu.findItem(R.id.menu_clear_console).setVisible(false);
+        }
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_fragment_console, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_clear_console:
+                BluetoothService.getInstance().clearCommandsList();
+                item.setVisible(false);
+                mAdapter.clearCommandList();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public void onBluetoothCommandReceived(Command command) {
-        mAdapter.addCommand(command);
+        if(mAdapter != null && mConsoleMessages != null) {
+            mAdapter.addCommand(command);
+
+            getActivity().invalidateOptionsMenu();
+
+        }
     }
 
     @Override
     public void onBluetoothCommandSent(Command command) {
-        mAdapter.addCommand(command);
+        if(mAdapter != null && mConsoleMessages != null) {
+            mAdapter.addCommand(command);
+            mConsoleMessages.scrollToPosition(mAdapter.getItemCount() - 1);
+        }
     }
 
     @Override

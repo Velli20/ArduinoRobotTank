@@ -83,6 +83,9 @@ public class BluetoothService {
         return mCommandsList;
     }
 
+    public void clearCommandsList() {
+        mCommandsList.clear();
+    }
 
     public synchronized void connect(BluetoothDevice device) {
 
@@ -257,18 +260,20 @@ public class BluetoothService {
 
                 // Read from the InputStream
                 try {
-                    buffer[bytes] = (byte) mInStream.read();
+                    if(bytes < 1024) {
+                        buffer[bytes] = (byte) mInStream.read();
+                        bytes++;
+                    }
                 } catch (IOException ignored) {}
                 // Send the obtained bytes to the UI Activity
-                if (bytes > 1024 || (buffer[bytes] == '\n')||(buffer[bytes]=='\r')) {
+                if (bytes > 1023 || (buffer[bytes -1] == '\n')||(buffer[bytes -1]=='\r')) {
                     try {
                         String command = new String(buffer, "UTF-8");
                         receiveCommand(new Command(command, System.currentTimeMillis(), true));
+                        buffer = new byte[1024];
                         bytes=0;
                     } catch (UnsupportedEncodingException ignored) {}
 
-                } else {
-                    bytes++;
                 }
             }
 

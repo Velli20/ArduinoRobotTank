@@ -40,3 +40,4 @@ Adafruit_SSD1306 display(OLED_RESET);
    to the Arduino board */
 #define BLUETOOTH_MODULE_SERIAL_PORT    Serial2
 #define BLUETOOTH_MODULE_BAUD_RATE      57600
+#define BLUETOOTH_READ_TIMEOUT          100

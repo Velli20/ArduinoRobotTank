@@ -92,6 +92,10 @@ public class FragmentAccelerometer extends Fragment implements SensorEventListen
 			Log.i(TAG, TAG + "onPause()");
 		}
 		mSensorManager.unregisterListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER));
+		if (BluetoothService.getInstance().getState() == Constants.STATE_CONNECTED) {
+			String command = String.format(Locale.getDefault(), "X%dY%d", 0, 0);
+			BluetoothService.getInstance().sendCommand(new Command(command, System.currentTimeMillis(), false));
+		}
 	}
 
 

@@ -33,6 +33,8 @@ class SkidSteer {
     void move(int y, int x);
     void stop();
     void delay(long timeInMillis);
+    void moveDistance(int distanceInCm, boolean forward);
+    void rotate(int degreesToRotate, boolean CCW);
 
     boolean isDelaying();
     long getRemainingDelayTime();

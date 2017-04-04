@@ -40,6 +40,7 @@ import android.content.Intent;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -298,16 +299,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public  void notifyBluetoothCommandCallbacks(Command command) {
-        if(mBluetoothCommandCallbacks != null && command != null) {
-            for(BluetoothCommandCallback callback : mBluetoothCommandCallbacks) {
-                if(command.isIncomingCommand()) {
-                    callback.onBluetoothCommandReceived(command);
-                } else {
-                    callback.onBluetoothCommandSent(command);
+    public  void notifyBluetoothCommandCallbacks(final Command command) {
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                if(mBluetoothCommandCallbacks != null && command != null) {
+                    for(BluetoothCommandCallback callback : mBluetoothCommandCallbacks) {
+                        if(command.isIncomingCommand()) {
+                            callback.onBluetoothCommandReceived(command);
+                        } else {
+                            callback.onBluetoothCommandSent(command);
+                        }
+                    }
                 }
             }
-        }
+        });
+
     }
 
     public void notifyBtStateCallbacks(int newState) {
