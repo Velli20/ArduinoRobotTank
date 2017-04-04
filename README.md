@@ -5,8 +5,7 @@
 
 Fully 3D-printable robot for Arduino Mega/Uno/Due Controller Board. Designed to fit up to 2 pcs of Arduino shields on top of the controller board.
 
-Parts to print
---------------
+## Parts to print
 
 - Chassis_top.stl
 - Chassis_bottom.stl
@@ -18,50 +17,43 @@ Parts to print
 - tank_link.stl (68 pcs)
 - Front_cover_for_HC_SR04.stl (2 pcs)
 
-Optional parts to print
------------------------
+## Optional parts to print
 
 - Chassis_fastener_holder.stl (29 pcs). These are for holding chassis nuts in place so it is easier to assemble the robot.
 
-Fasteners
----------
+## Fasteners
 
 - ISO10642 Screw M3x8 40 pcs
 - ISO14579 Screw M3x12 8 pcs
 - ISO14579 Screw M3x25 4 pcs
 - ISO4032 Nut M3 46 pcs
 
-Fasteners for LCD:
------------------
+## Fasteners for LCD:
 
 - ISO4762 Screw M2x8 4 pcs
 - ISO4032 Nut M2 4 pcs
 
-Fasteners for Ultrasonic HC-SR04 Distance Sensor:
--------------------------------------------------
+## Fasteners for Ultrasonic HC-SR04 Distance Sensor:
 
 - ISO4762 Screw M2x8 8 pcs
 - Nylon Spacers M2x5 8 pcs
 - ISO4762 Screw M2x12 8 pcs
 
-Electronics
------------
+## Electronics
 
 - 2x geared DC motors
 - Arduino DUE/Mega/UNO Controller Board
 - L298P Motor Shield R3
 - 7.4 V LiPo battery
 
-Optional electronics
---------------------
+## Optional electronics
 
 - ESP8266 WiFI Development Board 
 - SSD1306 0.96" I2C 128X64 OLED LCD
 - Ultrasonic HC-SR04 Distance Sensor 2 pcs
 - HC-05 Bluetooth module 
 
-Code example
-------------
+## Code example
 
 Usage of the skid steering algorithm:
 
@@ -76,8 +68,14 @@ void loop() {
 }
 ```
 
-Images
-------
+## Images
 
 ![Printed](https://cloud.githubusercontent.com/assets/25138671/24061920/10a73d28-0b62-11e7-8fdf-348cbf21785a.jpg)
 ![Printed](https://cloud.githubusercontent.com/assets/25138671/24061924/1616bc5c-0b62-11e7-92f6-fcb6090c6ec5.jpg)
+
+
+## Android app
+
+You can find precompiled apk in Android-App folder. With this app you can create "programs" that can be executed over Bluetooth connection. It also has a serial console and a "joystick" manual control.
+
+![Screenshots](https://cloud.githubusercontent.com/assets/25138671/24658407/476bcfa6-1952-11e7-810a-dbc1735b3b11.jpg)
